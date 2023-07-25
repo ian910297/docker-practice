@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web-server:
+    image: web-server
+    ports:
+      - "9527:80"
+  sql:
+    build:
+      context: .
+      dockerfile: basic-sql.Dockerfile
+    ports:
+      - "3306:3306"
